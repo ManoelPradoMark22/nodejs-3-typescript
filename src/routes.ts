@@ -2,7 +2,11 @@ import { Request, Response } from 'express';
 import CreateCourseService from './CreateCourseService';
 
 export function createCourse(req: Request, res: Response) {
-  CreateCourseService.execute("Node.js", 10, "Manoel");
+  CreateCourseService.execute({
+    name: "Node.js",
+    educator: "Manoel",
+    duration: 10
+  });
 
   return res.send();
 }
