@@ -1,7 +1,7 @@
-import { Category } from "../model/Category";
+import { Category } from '../model/Category';
 
-//DTO - data transfer object
 interface ICreateCategoryDTO {
+  // DTO - data transfer object
   name: string;
   description: string;
 }
@@ -19,11 +19,11 @@ class CategoriesRepository {
     Object.assign(category, {
       name,
       description,
-      created_at: new Date()
-    })
-  
+      created_at: new Date(),
+    });
+
     this.categories.push(category);
   }
 }
 
-export { CategoriesRepository }
+export { CategoriesRepository };
