@@ -19,9 +19,9 @@ specificationsRoutes.post('/', (req, res) => {
 });
 
 specificationsRoutes.get('/', (req, res) => {
-  const allCategories = specificationsRepository.list();
+  const allSpecifications = specificationsRepository.list();
 
-  return res.json(allCategories);
+  return res.json(allSpecifications);
 });
 
 export { specificationsRoutes };
