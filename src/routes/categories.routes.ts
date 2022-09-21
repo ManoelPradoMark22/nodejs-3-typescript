@@ -1,7 +1,8 @@
-import { Request, Router } from 'express';
+import { Router } from 'express';
 import multer from 'multer';
 
 import { createCategoryController } from '../modules/cars/useCases/createCategory';
+import { importCategoryController } from '../modules/cars/useCases/importCategory';
 import { listCategoriesController } from '../modules/cars/useCases/listCategories';
 
 const categoriesRoutes = Router();
@@ -9,10 +10,6 @@ const categoriesRoutes = Router();
 const upload = multer({
   dest: './tmp',
 });
-
-interface IMulterRequest extends Request {
-  file: File;
-}
 
 categoriesRoutes.post('/', (req, res) => {
   return createCategoryController.handle(req, res);
@@ -24,10 +21,7 @@ categoriesRoutes.get('/', (req, res) => {
 });
 
 categoriesRoutes.post('/import', upload.single('file'), (req, res) => {
-  const { file } = req as IMulterRequest;
-  console.log(file);
-
-  return res.send();
+  return importCategoryController.handle(req, res);
 });
 
 export { categoriesRoutes };
