@@ -2,15 +2,11 @@ import { Request, Response } from 'express';
 
 import { ImportCategoryUseCase } from './ImportCategoryUseCase';
 
-interface IMulterRequest extends Request {
-  file: File;
-}
-
 class ImportCategoryController {
   constructor(private importCategoryUseCase: ImportCategoryUseCase) {}
 
-  handle(req: Request, res: Response) {
-    const { file } = req as IMulterRequest;
+  handle(req: Request, res: Response): Response {
+    const { file } = req;
 
     this.importCategoryUseCase.execute(file);
 
