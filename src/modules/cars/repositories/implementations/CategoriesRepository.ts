@@ -12,19 +12,22 @@ class CategoriesRepository implements ICategoriesRepository {
 
   // padrão de projeto singleton - singleton pattern
   /* cria apenas uam instancia de uma classe p ser uma instancia global */
-  private static INSTANCE: CategoriesRepository;
+  // private static INSTANCE: CategoriesRepository;
 
-  private constructor() {
-    // this.categories = [];
+  // private constructor() {
+  //   // this.categories = [];
+  // }
+
+  constructor() {
     this.repository = getRepository(Category);
   }
 
-  public static getInstance(): CategoriesRepository {
-    if (!CategoriesRepository.INSTANCE)
-      CategoriesRepository.INSTANCE = new CategoriesRepository();
+  // public static getInstance(): CategoriesRepository {
+  //   if (!CategoriesRepository.INSTANCE)
+  //     CategoriesRepository.INSTANCE = new CategoriesRepository();
 
-    return CategoriesRepository.INSTANCE;
-  }
+  //   return CategoriesRepository.INSTANCE;
+  // }
 
   async create({ name, description }: ICreateCategoryDTO): Promise<void> {
     // const category = new Category();
@@ -46,7 +49,7 @@ class CategoriesRepository implements ICategoriesRepository {
 
   async list(): Promise<Category[]> {
     // return this.categories;
-    const categories = this.repository.find();
+    const categories = await this.repository.find();
     return categories;
   }
 
