@@ -38,6 +38,7 @@ class CategoriesRepository implements ICategoriesRepository {
     //   created_at: new Date(),
     // });
 
+    // somento o repository.create() q nao precisa do await - ao criar o Repository
     const category = this.repository.create({
       description,
       name,
