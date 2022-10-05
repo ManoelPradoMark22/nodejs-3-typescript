@@ -73,6 +73,33 @@
         }
       }
     },
+    "/categories/import": {
+      "post": {
+        "tags": ["Category"],
+        "summary": "Upload new categories",
+        "description": "Upload new categories - Import by file",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
     "/specifications": {
       "post": {
         "tags": ["Specification"],
@@ -136,6 +163,10 @@
         "description": {
           "type": "string"
         }
+      },
+      "example": {
+        "name": "Specification name sample",
+        "description": "Specification description sample"
       }
     }
   }
