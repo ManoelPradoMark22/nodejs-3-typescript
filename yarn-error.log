@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add express-async-errors
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add bcryptjs
 
 PATH: 
   C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\php\;C:\Program Files\Git\cmd;C:\ProgramData\ComposerSetup\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\wamp64\bin\php\php7.4.9;C:\Program Files\OpenJDK\openjdk-11.0.12_7\bin;C:\Users\manoe\AppData\Local\Android\Sdk\emulator;C:\Users\manoe\AppData\Local\Android\Sdk\tools;C:\Users\manoe\AppData\Local\Android\Sdk\tools\bin;C:\Users\manoe\AppData\Local\Android\Sdk\platform-tools;C:\Users\manoe\AppData\Local\Yarn\bin;;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\manoe\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\manoe\AppData\Local\Programs\Python\Python310\;C:\Users\manoe\AppData\Local\Microsoft\WindowsApps;C:\Users\manoe\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\manoe\AppData\Roaming\Composer\vendor\bin;C:\Users\manoe\AppData\Roaming\npm;C:\Users\manoe\AppData\Local\Yarn\bin;C:\Program Files\OpenJDK\openjdk-11.0.12_7;
@@ -50,6 +50,7 @@ npm manifest:
     "dependencies": {
       "csv-parse": "5.3.0",
       "express": "4.18.1",
+      "express-async-errors": "^3.1.1",
       "multer": "1.4.5-lts.1",
       "pg": "8.8.0",
       "reflect-metadata": "0.1.13",
@@ -1120,6 +1121,11 @@ Lockfile:
     version "1.8.1"
     resolved "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
     integrity sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==
+  
+  express-async-errors@^3.1.1:
+    version "3.1.1"
+    resolved "https://registry.yarnpkg.com/express-async-errors/-/express-async-errors-3.1.1.tgz#6053236d61d21ddef4892d6bd1d736889fc9da41"
+    integrity sha512-h6aK1da4tpqWSbyCa3FxB/V6Ehd4EEB15zyQq9qe75OZBp0krinNKuH4rAY+S/U/2I36vdLAUFSjQJ+TFmODng==
   
   express@4.18.1:
     version "4.18.1"
