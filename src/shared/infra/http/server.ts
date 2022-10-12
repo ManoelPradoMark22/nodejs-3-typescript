@@ -3,13 +3,13 @@ import express, { NextFunction, Request, Response } from 'express';
 import 'express-async-errors'; // após o import do express
 import swaggerUi from 'swagger-ui-express';
 
-import './database'; // deve vir antes das rotas
+import '../typeorm'; // deve vir antes das rotas
 
-import './shared/container';
+import '../../container';
 
-import { AppError } from './errors/AppError';
+import swaggerFile from '../../../swagger.json';
+import { AppError } from '../../errors/AppError';
 import { router } from './routes';
-import swaggerFile from './swagger.json';
 
 const app = express();
 
